@@ -4,7 +4,7 @@
   "description": "Front End Mentor 3 Column Preview Card Component Exercise",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "make-sass": "sass --no-source-map sass/style.scss styles/style.css"
   },
   "author": "Eduard Mekler",
   "license": "ISC",

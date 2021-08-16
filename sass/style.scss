@@ -8,6 +8,27 @@ $font-size-body: 15px;
 $font-sans-serif: 'Lexend Deca', sans-serif;
 $font-cursive: 'Big Shoulders Display', cursive;
 
+
+@mixin theme($color) {
+    background-color: $color;
+
+    .card__link {
+        color: $color;
+    }
+
+    .card__link:hover {
+        background-color: $color;
+        color: $color-components;
+        border: 2px solid $color-components;
+    }
+}
+
+%text {
+    font-family: $font-sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -42,9 +63,7 @@ body {
     }
 
     &__text {
-        font-family: $font-sans-serif;
-        line-height: 1.7;
-        letter-spacing: 0.5px;
+        @extend %text;
         color: $color-paragraph;
     }
 
@@ -67,19 +86,15 @@ body {
     }
 }
 
-@mixin theme($color) {
-    background-color: $color;
+.attribution {
+    @extend %text;
+    font-size: 11px;
+    text-align: center;
 
-    .card__link {
-        color: $color;
+    & a {
+        color: hsl(228, 45%, 44%);
     }
-
-    .card__link:hover {
-        background-color: $color;
-        color: $color-components;
-        border: 2px solid $color-components;
-    }
-}
+  }
 
 #sedans {
     @include theme($color-bright-orange);

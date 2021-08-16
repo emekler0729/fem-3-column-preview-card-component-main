@@ -94,3 +94,31 @@ body {
     @include theme($color-very-dark-cyan);
     border-radius: 0 0 5px 5px;
 }
+
+@media (min-width: 1023px) {
+    .container {
+        max-width: 1024px;
+        flex-direction: row;
+        align-items: normal;
+        margin-top: 12rem;
+    }
+
+    .card {
+        &__text {
+            padding-right: 1.5rem;
+        }
+
+        &__link {
+            margin-top: 6rem;
+        }
+    }
+
+    #sedans {
+        border-radius: 5px 0 0 5px;
+    }
+
+    #luxury {
+        border-radius: 0 5px 5px 0;
+    }
+}
+    

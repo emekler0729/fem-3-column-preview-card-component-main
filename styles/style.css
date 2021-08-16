@@ -86,3 +86,27 @@ body {
   color: #f2f2f2;
   border: 2px solid #f2f2f2;
 }
+
+@media (min-width: 1023px) {
+  .container {
+    max-width: 1024px;
+    flex-direction: row;
+    align-items: normal;
+    margin-top: 12rem;
+  }
+
+  .card__text {
+    padding-right: 1.5rem;
+  }
+  .card__link {
+    margin-top: 6rem;
+  }
+
+  #sedans {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #luxury {
+    border-radius: 0 5px 5px 0;
+  }
+}

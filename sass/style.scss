@@ -7,3 +7,77 @@ $color-components: hsl(0, 0%, 95%);
 $font-size-body: 15px;
 $font-sans-serif: 'Lexend Deca', sans-serif;
 $font-cursive: 'Big Shoulders Display', cursive;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $font-size-body;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem auto 0rem auto;
+    max-width: 343px;
+}
+
+.attribution {
+    margin: 2.5rem 0;
+}
+
+.card {
+    padding: 3rem;
+
+    &__title {
+        font-family: $font-cursive;
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 1.5rem 0;
+        color: $color-components;
+    }
+
+    &__text {
+        font-family: $font-sans-serif;
+        line-height: 1.7;
+        letter-spacing: 0.5px;
+        color: $color-paragraph;
+    }
+
+    &__link {
+        font-family: $font-sans-serif;
+        background-color: $color-components;
+        text-decoration: none;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        display: inline-block;
+        border-radius: 30px;
+    }
+}
+
+@mixin theme($color) {
+    background-color: $color;
+
+    .card__link {
+        color: $color;
+    }
+}
+
+#sedans {
+    @include theme($color-bright-orange);
+    border-radius: 5px 5px 0 0;
+}
+
+#suvs {
+    @include theme($color-dark-cyan);
+}
+
+#luxury {
+    @include theme($color-very-dark-cyan);
+    border-radius: 0 0 5px 5px;
+}

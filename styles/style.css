@@ -45,6 +45,8 @@ body {
   text-align: center;
   display: inline-block;
   border-radius: 30px;
+  border: 2px solid transparent;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border 0.25s ease-in-out;
 }
 
 #sedans {
@@ -54,12 +56,22 @@ body {
 #sedans .card__link {
   color: #e38826;
 }
+#sedans .card__link:hover {
+  background-color: #e38826;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+}
 
 #suvs {
   background-color: #006970;
 }
 #suvs .card__link {
   color: #006970;
+}
+#suvs .card__link:hover {
+  background-color: #006970;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
 }
 
 #luxury {
@@ -68,4 +80,9 @@ body {
 }
 #luxury .card__link {
   color: #004241;
+}
+#luxury .card__link:hover {
+  background-color: #004241;
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
 }
